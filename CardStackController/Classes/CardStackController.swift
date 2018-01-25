@@ -72,6 +72,11 @@ public class CardStackController: UIViewController {
     /// *Default value*: 5
     public var frequency: CGFloat = 5
 
+    /// If this property is set to true, the background is covered with a screen shot of underlying view hierarchy of the presenter.
+    ///
+    /// *Default value*: true
+    public var coversPresenterWithScreenShotImage = true
+
     public weak var delegate: CardStackControllerDelegate?
 
     public var numberOfCards: Int {
@@ -126,7 +131,7 @@ public class CardStackController: UIViewController {
     public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(false)
 
-        guard isBeingPresented else { return }
+        guard isBeingPresented, coversPresenterWithScreenShotImage else { return }
         let screenShotImage = drawWindowHierarchy(afterScreenUpdates: false)
         let imageView = UIImageView(image: screenShotImage)
         view.insertSubview(imageView, at: 0)
