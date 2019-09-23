@@ -410,6 +410,8 @@ import UIKit
                     currentDimView.backgroundColor = CardStackControllerPalette.backgroundColor
                 }
             }
+        @unknown default:
+            fatalError("Unknown sender state!")
         }
     }
 
