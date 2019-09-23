@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "CardStackController"
-  s.version      = "0.1.2"
+  s.version      = "0.1.3"
   s.summary      = "Custom controller that presents new ViewControllers as cards. Used in Jobandtalent iOS app"
 
   s.description  = <<-DESC
@@ -15,6 +15,6 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/jobandtalent/CardStackController.git", :tag => "#{s.version}" }
   s.ios.deployment_target = '8.0'
   s.requires_arc = true
-  s.swift_version = '4.2'
+  s.swift_version = '5.1'
   s.source_files = 'CardStackController/Classes/**/*'
 end
