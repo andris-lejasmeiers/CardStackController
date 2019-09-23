@@ -303,7 +303,7 @@ import UIKit
     /// - Parameter viewController: cards in front of this viewController will be dismissed. This viewController will become `TopViewController`
     /// - Parameter completion: completion block called after unstacking is complete
     public func unstack(to viewController: UIViewController, completion: CompletionBlock? = nil) {
-        guard let index = viewControllers.index(of: viewController) else {
+        guard let index = viewControllers.firstIndex(of: viewController) else {
             assertionFailure("Viewcontroller was not found in the stack")
             return
         }
